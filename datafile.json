@@ -1,0 +1,53 @@
+ [
+    {
+        "img": "https://bloganchoi.com/wp-content/uploads/2016/07/bo-4.jpg",
+        "title":"Beefsteak Bò Tót",
+        "text":"499$ 200g, Kèm Salad",
+        "price" : 499
+    },
+    {
+        "img":"https://media.cooky.vn/images/blog-2016/steak-la-gi-nhung-loai-steak-thong-dung-nhat-tren-toan-the-gioi-ma-ban-nhat-dinh-nen-nem-thu-mot-lan-1.jpg",
+        "title":"Beefsteak Bò Waygu A5",
+        "text":"1200$ 200g, Kèm Rượu Vang",
+        "price" : 1200
+    },
+    {
+        "img":"https://image-us.eva.vn/upload/4-2019/images/2019-11-25/gan-ngong-dac-san-tinh-hoa-nuoc-phap-hay-su-tan-nhan-ghe-ron-cua-con-nguoi-gan_ngong_mon_an_phap-1024x793-1574666794-73-width660height511.jpg",
+        "title":"Gan Ngỗng Pháp",
+        "text":"299$  100g~150g",
+        "price" : 299
+    },
+    {
+        "img":"https://kenh14cdn.com/thumb_w/600/5oY5KNV6vbfyClghcdGNAJpgMBONXa/Image/2013/10/b4ib31378477075-5ebdf.jpg",
+        "title":"Ngao Thiên Khuyển",
+        "text":"150$ 500g",
+        "price" : 150
+    },
+    {
+        "img": "https://icdn.dantri.com.vn/k:cf2bc374ea/2015/12/13/lau-kim-chi-1449976033308/ba-mon-lau-am-anh-nhung-nguoi-khong-an-duoc-cay.jpg",
+        "title":"Lẫu Kim Chi",
+        "text":"299$ Free Thịt & Rau",
+        "price" : 299
+    },
+    {
+        "img":"https://images.foody.vn/images/xac-5-mon-an-nhanh-duoc-ua-chuong-nhat-the-gioi_f413cea463.jpg",
+        "title":"Hamburger Thịt Mèo",
+        "text":"89$ Phần",
+        "price" : 89
+    },
+    {
+        "img":"https://vcdn-dulich.vnecdn.net/2019/07/19/van-hoa-mi-y-1-1562154993-8066-7320-6324-1563497650.png",
+        "title":"Mì Ý",
+        "text":"139K",
+        "price" : 139
+    },
+    {
+        "img":"https://s1.img.yan.vn/YanNews/2167221/201607/20160707-042750-1_600x375.jpg",
+        "title":"Pizza Hải Sản",
+        "text":"399$ 32cm",
+        "price" : 399
+    }
+
+
+    
+]

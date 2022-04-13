@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d6450f4703.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="container-flux">
+        <nav class="navbar navbar-expand-sm navbar-light bg-warning">
+            <div class="container-fluid">
+                <i class="fa-solid fa-tree-city fa-2xl mx-5"></i>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="javascript:void(0)"><i
+                                    class="fa-solid fa-house-chimney fa-2xl mx-2"></i>Trang Chủ</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="javascript:void(0)">Giới Thiệu</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown mx-3">
+                            <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Cửa hàng
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <hr>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-cow mx-2"></i>Các Món Thịt
+                                        Bò</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-fish mx-2"></i>Các Món
+                                        Cá</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Các Món Thịt Heo</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Các Loại Lẩu</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Rau Củ Quả Các Loại</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown mx-3">
+                            <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Tin Tức
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <hr>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-credit-card mx-2"></i>Phương
+                                        Thức Thanh Toán</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="fa-solid fa-cart-flatbed-suitcase mx-2"></i>Phương Thức Vận
+                                        Chuyển</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="fa-solid fa-arrows-rotate mx-2"></i>Phương Thức Đổi Trả</a></li>
+                                <hr>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#cart"><i
+                                    class="fa-solid fa-basket-shopping mx-2"></i>Giỏ Hàng</a>
+                        </li>
+
+
+
+
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+                                data-bs-target="#loginModal"><i class="fa-solid fa-right-to-bracket mx-2"></i>Đăng
+                                Nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal"
+                                data-bs-target="#signupModal"><i class="fa-solid fa-user-plus mx-2"></i>Đăng Ký</a>
+                        </li>
+
+
+                        <!-- login modal -->
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header ">
+                                        <h5 class="modal-title" id="exampleModalLabel">Đăng Nhập</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form name="frm" action="" method="" accept-charset="UTF-8">
+                                            <div class="form-group">
+                                                <label for="Email">Email</label>
+                                                <input required ng-model="email" type="email" class="form-control"
+                                                    name="email" placeholder="abc@gmail.com">
+                                                <em ng-if="frm.email.$invalid" class="text-danger h6">Không đúng định
+                                                    dạng email</em>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Mật Khẩu</label>
+                                                <input required minlength="2" maxlength="30" ng-model="password"
+                                                    type="password" class="form-control" name="password"
+                                                    placeholder="Mật Khẩu Của Bạn">
+                                                <em ng-if="frm.password.$invalid" class="text-danger h6">Nhập từ 2 đến
+                                                    30 ký tự</em>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            id="exampleCheck1">
+                                                        <label class="form-check-label" for="exampleCheck1">Lưu Mật
+                                                            Khẩu</label>
+                                                    </div>
+                                                    <div class="col-sm text-sm-end">
+                                                        <a href="#" class="text-decoration-none" data-bs-toggle="modal"
+                                                            data-bs-target="#forgotModal">Quên Mật Khẩu ?</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-grid gap-2">
+                                                <button type="submit" class="btn btn-primary p-2 mt-2">Đăng
+                                                    Nhập</button>
+                                            </div>
+                                        </form>
+                                        <div class="my-3">
+                                            <div class="form-text text-center text-black text-sm">
+                                                Chưa Có Tài Khoản ?
+                                                <a class="text-decoration-none" data-bs-toggle="modal"
+                                                    data-bs-target="#signupModal" href="#">Đăng Ký</a>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Giỏ Hàng Modal -->
+
+
+
+                        <div class="modal fade " id="cart" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                            <div class="modal-dialog" role="document">
+
+                                <div class="modal-content">
+
+                                    <div class="row">
+                                        <div class="card p-0">
+                                            <div class=" card-title text-center">
+                                                <h5 class="mt-5">HÓA ĐƠN CHI TIẾT</h5> <small class="para">Sản Phẩm Đã
+                                                    Chọn</small>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <table class="table table-bordered ">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>STT</td>
+                                                            <td>Xác Nhận</td>
+                                                            <td>Mô Tả Sản Phẩm</td>
+                                                            <td>Tên Sản Phẩm</td>
+                                                            <td>Đơn Giá</td>
+                                                            <td>Hủy Bỏ</td>
+
+
+                                                        </tr>
+                                                        <tr ng-repeat="item in list_item1" ng-init="item.quantity = 0;">
+                                                            <td>{{$index+1}}</td>
+                                                            <td><input ng-model="item.buy" type="checkbox" name=""
+                                                                    id=""></td>
+                                                            <td><img src="{{item.img}}" width="100px" alt=""></td>
+                                                            <td class="text-info">{{item.name}}</td>
+                                                            <td class="text-warning">{{item.price | currency}}</td>
+                                                            <td><button ng-click="delete($index)" type="button"
+                                                                    class="btn btn-danger">XÓA</button></td>
+
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                                <div style="display: flex;">
+                                                    <div class="text-warning" style="width: 200px;">TỔNG TIỀN {{getAmount() | currency}}
+                                                    </div>
+
+
+                                                    <button class="btn btn-success p-2 mt-2"
+                                                        style="margin-left: 170px;border-radius: 5px 5px 5px 5px ;width: 300px;"
+                                                        type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal">
+                                                        Thanh Toán
+                                                    </button>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel">Trạng
+                                                                        Thái</h5>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body text-success"><i class="fa-brands fa-cc-visa mx-2"></i>
+                                                                    Thanh Toán Thành Công  <i class="fa-solid fa-circle-check"></i>
+                                                                </div>
+
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-success"
+                                                                        data-bs-dismiss="modal">Hoàn Tất</button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- Signup modal -->
+                        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header ">
+                                        <h5 class="modal-title" id="exampleModalLabel">Đăng Ký</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form name="frm" action="" method="" accept-charset="UTF-8">
+                                            <div class="form-group">
+                                                <label for="Email">Email</label>
+                                                <input required ng-model="email" type="email" class="form-control"
+                                                    name="email" placeholder="abc@gmail.com">
+                                                <em ng-if="frm.email.$invalid" class="text-danger h6">Không đúng định
+                                                    dạng email</em>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Mật Khẩu</label>
+                                                <input required minlength="2" maxlength="30" ng-model="password"
+                                                    type="password" class="form-control" name="password"
+                                                    placeholder="Mật Khẩu Của Bạn">
+                                                <em ng-if="frm.password.$invalid" class="text-danger h6">Nhập từ 2 đến
+                                                    30 ký tự</em>
+                                            </div>
+
+                                            <div class="mb-3 form-check">
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            id="exampleCheck1">
+                                                        <label class="form-check-label" for="exampleCheck1">
+                                                            Tôi Đồng Ý <a class="text-decoration-none" href="">Điều
+                                                                Khoản và Dịch Vụ</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-grid gap-2">
+                                                <button type="submit" class="btn btn-primary p-2 mt-2">Đăng Ký</button>
+                                            </div>
+                                        </form>
+                                        <div class="my-3">
+                                            <div class="form-text text-center text-black text-sm">
+                                                Already have an account?
+                                                <a class="text-decoration-none" data-bs-toggle="modal"
+                                                    data-bs-target="#loginModal" href="#">Đăng Nhập</a>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Tìm Kiếm Tại Đây">
+                        <button class="btn btn-dark" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../ASM/img/Banner-thit-bo-scaled.jpeg" class="d-block w-100" alt="..." width="550"
+                            height="450">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../ASM/img/lau.jpeg" class="d-block w-100" alt="..." width="450" height="450">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../ASM/img/sale1.jpeg" class="d-block w-100" alt="..." width="550" height="450">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+
+            <!--Card-->
+            <div class="row bg-light">
+                <div class="col-sm-6" ng-repeat="p in products" style="margin-left: -62px;">
+                    <br>
+                    <div class="card" style="width: 28rem; height: 330px; margin-left: 230px;">
+                        <img class="card-img-top" src="{{p.img}}" style="width: 446px; height: 186px;"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{p.title}} <span class="badge badge-secondary"
+                                    style="background-color: red;"><i class="fa-brands fa-hotjar mx-2"></i>Best
+                                    Seller</span></h5>
+                            <p class="card-text text-info">{{p.text}}</p>
+                            <a href="" ng-click="them($index)" class="btn btn-warning">Mua Ngay</a>
+
+
+                            <!---->
+
+
+
+                            <!---->
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <!--Card-->
+
+
+
+
+
+
+
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Hóa Đơn Giao Dịch Của Bạn</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Thêm Vào Giỏ Hàng
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy Thanh
+                                Toán</button>
+                            <button type="button" class="btn btn-success">Thêm Vào Giỏ Hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+        </header>
+    </div>
+    <hr>
+
+
+    <main>
+        <section>
+            <div class="text-warning">
+                <h3>Danh Sách Mua Hàng Gần Đây</h3>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">STT</th>
+                        <th scope="col">Tên Khách Hàng</th>
+                        <th scope="col">Tên Món Ăn</th>
+                        <th scope="col">SĐT</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="text-primary">Nguyễn Thanh Tâm</td>
+                        <td>Beefsteak</td>
+                        <td class="text-secondary">037****617</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="text-primary">Nguyễn Thanh Tâm</td>
+                        <td>Beefsteak</td>
+                        <td class="text-secondary">037****617</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="text-primary">Nguyễn Thanh Tâm</td>
+                        <td>Beefsteak</td>
+                        <td class="text-secondary">037****617</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td class="text-primary">Nguyễn Thanh Tâm</td>
+                        <td>Beefsteak</td>
+                        <td class="text-secondary">037****617</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td class="text-primary">Nguyễn Thanh Tâm</td>
+                        <td>Beefsteak</td>
+                        <td class="text-secondary">037****617</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="row page-footer font-small blue justify-content-center border-top">
+        <nav class="navbar navbar-light bg-light border-top justify-content-center">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-center">
+                <h5 class="text-uppercase">Thanh Tâm FOOD</h5>
+
+                <section class="mb-4">
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://www.facebook.com/profile.php?id=100022418229630" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/"
+                        role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/twi"
+                        role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://mail.google.com/mail/u/0/#inbox?compose=new" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.tiktok.com/"
+                        role="button" data-mdb-ripple-color="dark"><i class="fa-brands fa-tiktok"></i></a>
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.youtube.com/"
+                        role="button" data-mdb-ripple-color="dark"><i class="fa-brands fa-youtube"></i></a>
+
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.apple.com/apple-pay/"
+                        role="button" data-mdb-ripple-color="dark"><i class="fa-brands fa-cc-apple-pay"></i></a>
+
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://www.visa.com.vn/vi_VN/pay-with-visa/find-a-card/credit-cards.html" role="button"
+                        data-mdb-ripple-color="dark"><i class="fa-brands fa-cc-visa"></i></a>
+                </section>
+            </div>
+        </nav>
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 bg-warning text-light ">
+
+            ©2022 Copyright:
+            <a href="https://www.facebook.com/profile.php?id=100022418229630"> Thanh Tâm Food</a>
+        </div>
+    </footer>
+    </div>
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="spinner-border text-dark" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+
+
+
+
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope, $http) {
+
+            $scope.list_item1 = [];
+            $scope.getAmount = function () {
+                var amount = 0;
+                for (var i = 0; i < $scope.list_item1.length; i++) {
+                    if ($scope.list_item1[i].buy) {
+                        amount += $scope.list_item1[i].price;
+                    }
+                }
+                return amount;
+            };
+
+            $scope.delete = function (n) {
+                $scope.list_item1.splice(n, 1);
+            }
+            $scope.products = []
+            $http.get("datafile.json").then(function (response) {
+                $scope.products = response.data;
+
+                $scope.them = function (n) {
+                    $scope.list_item1.push({
+                        img: $scope.products[n].img,
+                        name: $scope.products[n].title,
+                        price: $scope.products[n].price
+                    });
+                }
+            })
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
